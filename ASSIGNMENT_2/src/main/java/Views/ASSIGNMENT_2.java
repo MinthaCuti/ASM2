@@ -17,11 +17,7 @@ import java.util.Scanner;
  */
 public class ASSIGNMENT_2 {
 
-    public static String HOSTNAME = "Localhost";
-    public static String PORT = "1433";
-    public static String DBNAME = "QLNT";
-    public static String USERNAME = "sa";
-    public static String PASSWORD = "Mint1234"; //người khác vào đổi mật khẩu.
+    
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -117,7 +113,7 @@ public class ASSIGNMENT_2 {
                             System.out.print("Mo ta: ");
                             nt.setMoTa(sc.nextLine());
 
-                            System.out.println("Chọn trạng thái (1. Còn tốt, 2. Hư hỏng, 3. Mất): ");
+                            System.out.println("Chọn trạng thái (1. Còn tốt, 2. Hư hỏng, 3. Bảo trì): ");
                             int statusChoice = Integer.parseInt(sc.nextLine());
                             switch (statusChoice) {
                                 case 1 ->
@@ -134,6 +130,8 @@ public class ASSIGNMENT_2 {
                             nt.setMaNguoiDung(sc.nextLine());
 
                             ntService.add(nt, ndService);
+                            
+                            
 
                             System.out.println("Them thanh cong!");
                             break;
